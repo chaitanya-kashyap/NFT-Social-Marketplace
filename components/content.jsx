@@ -24,9 +24,8 @@ export default function Content () {
                 <div className="text-gray-100 container ml-28 pl-9 flex flex-col items-center px-5 py-8 mx-auto">
                     <div className="flex flex-col w-full mb-8 prose text-left max-w-max lg:max-w-2xl">
                     <div className="w-full mx-auto">
-                        <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Creators</h1>
-                        <h2>A small headline to switch your visitors into users.</h2>
-                        <p>Right. Say that again. No, no, George, look, it's just an act, right? Okay, so 9:00 you're strolling through the parking lot, you see us struggling in the car, you walk up, you open the door and you say, your line, George. Stop it. We're gonna take a little break but we'll be back in a while so, don't nobody go no where.</p>
+                        <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Enthusiasts</h1>
+                        <p>This is a social community and server features in which users can join multiple communities and interact with each other for education purposes about NFT’s. These communities are for everyone enthusiastic to learn and explore more about NFT’s.</p>
                     </div>
                     </div>
                 </div>
@@ -36,11 +35,11 @@ export default function Content () {
                         <div className="lg:grid lg:grid-cols-2">
                         <div className="p-8">
                             <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Traders</h1>
-                            <p>You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing .</p>
+                            <p>A platform for NFT traders where they can buy and sell tokens in the marketplace which takes place in a decentralized medium with cryptocurrency (Ethereum).</p>
                         </div>
                         <div className="p-8">
-                            <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Enthusiasts</h1>
-                            <p>You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing .</p>
+                            <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Creators</h1>
+                            <h2>This application is being made for the creators that creates NFT’s with their own set prices and quanities and trade them in the marketplace.</h2>
                         </div>
                         </div>
                     </div>
@@ -51,3 +50,4 @@ export default function Content () {
         </>
     )
 }
+
