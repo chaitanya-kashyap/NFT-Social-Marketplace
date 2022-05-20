@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function Content () {
     return (
         <>
@@ -20,35 +21,33 @@ export default function Content () {
                 </div>
             </section>
             <section>
-  <div className="text-gray-100 container ml-28 pl-9 flex flex-col items-center px-5 py-8 mx-auto">
-    <div className="flex flex-col w-full mb-8 prose text-left max-w-max lg:max-w-2xl">
-      <div className="w-full mx-auto">
-        <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Creators</h1>
-        <h2>A small headline to switch your visitors into users.</h2>
-        <p>Right. Say that again. No, no, George, look, it's just an act, right? Okay, so 9:00 you're strolling through the parking lot, you see us struggling in the car, you walk up, you open the door and you say, your line, George. Stop it. We're gonna take a little break but we'll be back in a while so, don't nobody go no where.</p>
-      </div>
-    </div>
-  </div>
-  <div className="text-gray-100 ml-28 pl-9 container items-center w-full px-5">
-    <div className="flex flex-wrap justify-center w-full mx-auto prose max-w-max lg:max-w-3xl">
-      <div className="relative justify-center lg:px-4">
-        <div className="lg:grid lg:grid-cols-2">
-          <div className="p-8">
-            <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Traders</h1>
-            <p>You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing .</p>
-          </div>
-          <div className="p-8">
-            <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Enthusiasts</h1>
-            <p>You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing .</p>
-          </div>
+                <div className="text-gray-100 container ml-28 pl-9 flex flex-col items-center px-5 py-8 mx-auto">
+                    <div className="flex flex-col w-full mb-8 prose text-left max-w-max lg:max-w-2xl">
+                    <div className="w-full mx-auto">
+                        <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Creators</h1>
+                        <h2>A small headline to switch your visitors into users.</h2>
+                        <p>Right. Say that again. No, no, George, look, it's just an act, right? Okay, so 9:00 you're strolling through the parking lot, you see us struggling in the car, you walk up, you open the door and you say, your line, George. Stop it. We're gonna take a little break but we'll be back in a while so, don't nobody go no where.</p>
+                    </div>
+                    </div>
+                </div>
+                <div className="text-gray-100 ml-28 pl-9 container items-center w-full px-5">
+                    <div className="flex flex-wrap justify-center w-full mx-auto prose max-w-max lg:max-w-3xl">
+                    <div className="relative justify-center lg:px-4">
+                        <div className="lg:grid lg:grid-cols-2">
+                        <div className="p-8">
+                            <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Traders</h1>
+                            <p>You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing .</p>
+                        </div>
+                        <div className="p-8">
+                            <h1 className="text-3xl block w-full text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-600 lg:inline">Enthusiasts</h1>
+                            <p>You're about to launch soon and must be 100% focused on your product. Don't loose precious days designing, coding the landing page and testing .</p>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-</div>
-
-
         </>
     )
 }

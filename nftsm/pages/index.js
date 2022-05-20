@@ -2,7 +2,6 @@
 import Image from 'next/image'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Navbar from '../components/navbar'
-import S from "../assets/image.webp"
 import Link from 'next/link'
 
 
@@ -25,9 +24,6 @@ export default function Hero(){
             <ChevronRightIcon className='text-purple-600 h-6 w-6 mt-0.5 ' />
           </div>
           </div>
-        <div className="w-full mx-auto mt-20 text-center md:w-10/12">
-            {/* <Image src="/public/image.png" alt="Intro" layout='fill' className="w-full rounded-lg shadow-2xl" /> */}
-        </div>
       </section>
       </div>
     </>
