@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { ChevronRightIcon } from '@heroicons/react/solid'
 import Navbar from '../components/navbar'
 import Link from 'next/link'
+import Footer from '../components/footer'
 
 
 export default function Hero(){
@@ -26,6 +27,7 @@ export default function Hero(){
           </div>
       </section>
       </div>
+      <Footer />
     </>
   )
 }
