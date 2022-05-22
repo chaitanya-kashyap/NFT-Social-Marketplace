@@ -1,11 +1,23 @@
+import { Dialog, Transition } from '@headlessui/react'
+import { Fragment, useState } from 'react'
+
 export default function Footer() {
+    let [isOpen, setIsOpen] = useState(false)
+
+    function closeModal() {
+        setIsOpen(false)
+    }
+
+    function openModal() {
+        setIsOpen(true)
+    }
     return (
         <footer class="bg-black mx-32 px-2.5" aria-labelledby="footer-heading">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20">
             <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             <div class="space-y-8 xl:col-span-1">
-                <a href="./index.html" class="text-lg font-bold tracking-tighter text-purple-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8"> Black Pearl </a>
+                <p class="text-lg font-medium tracking-tighter text-purple-600 transition duration-500 ease-in-out transform tracking-relaxed lg:pr-8"> Black Pearl </p>
                 <p class="w-1/2 mt-2 text-sm text-gray-500">Marketplace for NFT's </p>
             </div>
             <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
@@ -56,15 +68,69 @@ export default function Footer() {
                     <h3 class="text-xs font-semibold tracking-wider text-purple-600 uppercase">Subscribe to our newsletter</h3>
                     <p class="mt-4 text-sm text-gray-500 lg:ml-auto">The latest news and articles sent to your inbox weekly.</p>
                     <div class="inline-flex items-center gap-2 mt-4 list-none lg:ml-auto">
-                        <form action="" method="post" id="revue-form" name="revue-form" target="_blank" class="p-1 mt-4 transition duration-500 ease-in-out transform border2 bg-gray-50 rounded-xl sm:max-w-lg sm:flex">
-                        <div class="flex-1 min-w-0 revue-form-group">
-                            <label for="member_email" class="sr-only">Email address</label>
-                            <input id="cta-email" type="email" class="block w-full px-3 py-1 text-lg text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform bg-transparent border border-transparent rounded-md focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" placeholder="Enter your email  "  />
+                        <div class="p-1 mt-4 transition duration-500 ease-in-out transform border2 bg-gray-50 rounded-xl sm:max-w-lg sm:flex">
+                        <div class="flex-1 min-w-0">
+                            <label class="sr-only">Email address</label>
+                            <input class="block w-full px-3 py-1 text-lg text-neutral-600 placeholder-gray-300 transition duration-500 ease-in-out transform bg-transparent border border-transparent rounded-md focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" placeholder="Enter your email  "  />
                         </div>
-                        <div class="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
-                            <button type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" class="block py-2 text-sm font-medium text-white bg-purple-600 border border-transparent rounded-lg shadow hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300 sm:px-6">Notify me</button>
+                        <div class="mt-4 sm:mt-0 sm:ml-3">
+                            <button onClick={openModal} class="block py-2 text-sm font-medium text-white bg-purple-600 border border-transparent rounded-lg hover:bg-purple-700 shadow-lg sm:px-6">Notify me</button>
                         </div>
-                        </form>
+                        </div>
+                        <Transition appear show={isOpen} as={Fragment}>
+                            <Dialog as="div" className="relative z-40" onClose={closeModal}>
+                            <Transition.Child
+                                as={Fragment}
+                                enter="ease-out duration-300"
+                                enterFrom="opacity-0"
+                                enterTo="opacity-100"
+                                leave="ease-in duration-200"
+                                leaveFrom="opacity-100"
+                                leaveTo="opacity-0"
+                            >
+                                <div className="fixed bg-black bg-opacity-25" />
+                            </Transition.Child>
+
+                            <div className="fixed inset-0">
+                                <div className="flex min-h-full items-center justify-center p-4 text-center">
+                                <Transition.Child
+                                    as={Fragment}
+                                    enter="ease-out duration-300"
+                                    enterFrom="opacity-0 scale-95"
+                                    enterTo="opacity-100 scale-100"
+                                    leave="ease-in duration-200"
+                                    leaveFrom="opacity-100 scale-100"
+                                    leaveTo="opacity-0 scale-95"
+                                >
+                                    <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                    <Dialog.Title
+                                        as="h3"
+                                        className="text-lg font-medium leading-6 text-gray-900"
+                                    >
+                                        Newsletter Confirmed!
+                                    </Dialog.Title>
+                                    <div className="mt-2">
+                                        <p className="text-sm text-gray-500">
+                                        You have successfully subscribed to our newsletter.
+                                        Enjoy our latest content.
+                                        </p>
+                                    </div>
+
+                                    <div className="mt-4">
+                                        <button
+                                        type="button"
+                                        className="inline-flex justify-center rounded-md border border-transparent bg-purple-100 px-4 py-2 text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                                        onClick={closeModal}
+                                        >
+                                        Got it, thanks!
+                                        </button>
+                                    </div>
+                                    </Dialog.Panel>
+                                </Transition.Child>
+                                </div>
+                            </div>
+                            </Dialog>
+                        </Transition>
                     </div>
                     </div>
                 </div>

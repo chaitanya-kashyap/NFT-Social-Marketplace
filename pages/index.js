@@ -4,8 +4,6 @@ import { ChevronRightIcon } from '@heroicons/react/solid'
 import Navbar from '../components/landing/navbar'
 import Link from 'next/link'
 import Footer from '../components/landing/footer'
-import Confirm from '../components/alerts/confirm'
-
 
 export default function Hero(){
   return (
