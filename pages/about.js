@@ -1,4 +1,5 @@
 import Content from "../components/landing/content";
+import Footer from "../components/landing/footer";
 import Navbar from "../components/landing/navbar";
 
 export default function About () {
@@ -6,6 +7,7 @@ export default function About () {
         <>
             <Navbar />
             <Content /> 
+            <Footer />
         </>
     )
 }
