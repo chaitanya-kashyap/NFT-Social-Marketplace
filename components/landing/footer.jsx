@@ -12,7 +12,7 @@ export default function Footer() {
         setIsOpen(true)
     }
     return (
-        <footer class="bg-black mx-32 px-2.5" aria-labelledby="footer-heading">
+        <footer class="bg-black mx-32 px-2.5 divide-y divide-gray-800" aria-labelledby="footer-heading">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
         <div class="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20">
             <div class="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -139,7 +139,7 @@ export default function Footer() {
             </div>
         </div>
 
-        <div class="px-5 py-12 mx-auto bg-black max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
+        <div class="px-5 py-6 mx-auto bg-black max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
             <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
             
 
