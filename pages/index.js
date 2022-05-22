@@ -1,9 +1,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import Image from 'next/image'
 import { ChevronRightIcon } from '@heroicons/react/solid'
-import Navbar from '../components/navbar'
+import Navbar from '../components/landing/navbar'
 import Link from 'next/link'
-import Footer from '../components/footer'
+import Footer from '../components/landing/footer'
+import Confirm from '../components/alerts/confirm'
 
 
 export default function Hero(){
