@@ -2,7 +2,7 @@
 export default function Content () {
     return (
         <>
-        <div className="mx-28">
+        <div className="mx-28 my-8">
             <section className="text-gray-100">
                 <div className="container flex flex-col items-center px-5 py-8 mx-auto lg:px-24">
                     <div>
