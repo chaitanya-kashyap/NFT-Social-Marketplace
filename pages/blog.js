@@ -4,6 +4,7 @@ import Navbar from "../components/landing/navbar";
 import { getAllPosts } from "./api/blogPosts";
 import NFT from '../assets/nft.webp'
 import Human from '../assets/human.svg'
+import Link from "next/link";
 
 export default function Blog({ posts }) {
     return (
@@ -38,12 +39,11 @@ export default function Blog({ posts }) {
                             <div>
                                 <p class="pt-12 mb-3 text-sm font-normal text-gray-500">{post.date}</p>
                                 <h2 class="mb-2 text-xl font-extrabold leading-snug tracking-tight text-gray-800 md:text-3xl">
-                                    <a href="#" class="text-gray-100">{post.title}</a>
+                                <span className="text-gray-100 hover:text-purple-600 "><Link href={`/posts/${post.slug}`}>{post.title}</Link></span>
                                 </h2>
                                 <p class="mb-4 text-base font-normal text-gray-600">
                                     {post.excerpt}
                                 </p>
-                                <a href="#" class="bg-purple-100 rounded-md text-sm p-1.5 hover:bg-purple-600 hover:text-white">Continue Reading</a>
                             </div>
                             </>
                         ))
