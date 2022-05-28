@@ -1,6 +1,5 @@
 import Navbar from '../components/landing/navbar'
 import Footer from '../components/landing/footer'
-import Display from '../components/landing/display'
 import { useWeb3 } from '@3rdweb/hooks'
 import View from '../components/landing/view';
 import { useEffect } from 'react';
@@ -30,14 +29,12 @@ export default function Hero(){
     <>
       <LoggedNavbar />
       <View />
-      <Display />
       <Footer />
     </>
     ) : (
       <>
         <Navbar />
         <View />
-        <Display />
         <Footer />
       </>
     )};
