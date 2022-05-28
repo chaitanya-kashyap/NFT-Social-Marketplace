@@ -1,15 +1,26 @@
+import { useWeb3 } from "@3rdweb/hooks";
 import { useRouter } from "next/router";
 import Footer from "../../components/landing/footer";
 import Navbar from "../../components/landing/navbar";
+import LoggedNavbar from "../../components/main/loggedNavbar";
 
 
 export default function Collections() {
     const router = useRouter()
+    const address = useWeb3()
     return  (
         <>
-           <Navbar />
-           <h2>{router.query.collectionId}</h2>
-           <Footer /> 
+        {address ? (
+            <>
+                <LoggedNavbar />
+                <Footer />
+            </>
+        ) : (
+            <>
+                <Navbar />
+                <Footer /> 
+            </>
+        )}
         </>
     )
 }

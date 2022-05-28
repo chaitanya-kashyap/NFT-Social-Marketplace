@@ -5,9 +5,10 @@ import { useWeb3 } from '@3rdweb/hooks'
 import View from '../components/landing/view';
 import { useEffect } from 'react';
 import { client } from '../lib/sanityClient';
+import LoggedNavbar from '../components/main/loggedNavbar';
 
 export default function Hero(){
-  const { address, connectWallet } = useWeb3();
+  const { address } = useWeb3();
 
   useEffect(() => {
     if (!address) return
@@ -27,18 +28,18 @@ export default function Hero(){
     <>
     {address ? (
     <>
-      <Navbar />
+      <LoggedNavbar />
       <View />
       <Display />
       <Footer />
     </>
     ) : (
-      <div className="text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-1 text-center mt-3 mr-0 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-blue-800">
-        <button
-         onClick={() => connectWallet('injected')}>
-           Connect Wallet
-        </button>
-      </div>
+      <>
+        <Navbar />
+        <View />
+        <Display />
+        <Footer />
+      </>
     )};
     </>
   )

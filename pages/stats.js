@@ -1,11 +1,23 @@
+import { useWeb3 } from "@3rdweb/hooks";
 import Footer from "../components/landing/footer";
 import Navbar from "../components/landing/navbar";
+import LoggedNavbar from "../components/main/loggedNavbar";
 
 export default function Stats() {
+    const address = useWeb3()
     return (
         <>
-            <Navbar />
-            <Footer />
+        {address ? (
+            <>
+                <LoggedNavbar />
+                <Footer />
+            </>
+        ) : (
+            <>
+                <Navbar />
+                <Footer />  
+            </>
+        )}
         </>
     )
 }
