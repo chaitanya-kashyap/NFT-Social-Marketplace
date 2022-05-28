@@ -3,24 +3,25 @@ import Footer from '../components/landing/footer'
 import Display from '../components/landing/display'
 import { useWeb3 } from '@3rdweb/hooks'
 import View from '../components/landing/view';
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
+import { client } from '../lib/sanityClient';
 
 export default function Hero(){
   const { address, connectWallet } = useWeb3();
 
-  // useEffect(() => {
-  //   if (!address) return
-  //   ;(async () => {
-  //       const userDoc = {
-  //         _type: 'users',
-  //         _id: address,
-  //         userName: 'Unnamed',
-  //         walletAddress: address,
-  //       }
+  useEffect(() => {
+    if (!address) return
+    ;(async () => {
+        const userDoc = {
+          _type: 'users',
+          _id: address,
+          userName: 'Unnamed',
+          walletAddress: address,
+        }
 
-  //       const result = await client.createIfNotExists(userDoc)
-  //   })()
-  // }, [address])
+        const result = await client.createIfNotExists(userDoc)
+    })()
+  }, [address])
 
   return (
     <>
