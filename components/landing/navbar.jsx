@@ -14,6 +14,7 @@ export default function Navbar(){
                     </span>
                     <div className="flex space-x-8 text-white">
                         <span className="hover:text-purple-200"><Link href="/collections/[collectionId].js">Collection</Link></span>
+                        <span className="hover:text-purple-200"><Link href="https://discord.gg/rCGJEeNUWA">Community</Link></span>
                         <span className="hover:text-purple-200"><Link href="/blog">Blog</Link></span>
                     </div>
                     <div className="text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-1 text-center mt-3 mr-0 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-blue-800">
