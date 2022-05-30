@@ -7,6 +7,8 @@ import NFTCard from '../../components/main/NFTCard'
 import LoggedNavbar from '../../components/main/loggedNavbar'
 import Navbar from '../../components/landing/navbar'
 import Footer from '../../components/landing/footer'
+import Warn from '../../components/main/warn'
+
 
 const Collection = () => {
     const { address } = useWeb3()
@@ -103,17 +105,7 @@ const Collection = () => {
     ) : (
       <>
         <Navbar />
-        <div className='border-2 border-purple-600 text-white'>
-        {collection.floorPrice}
-          </div>
-        {nfts.map((nftItem, id) => (
-          <NFTCard
-          key={id}
-          nftItem={nftItem}
-          title={collection.title}
-          listings={listings}
-          />
-      ))}
+        <Warn />
       <Footer />
       </>
     )}
