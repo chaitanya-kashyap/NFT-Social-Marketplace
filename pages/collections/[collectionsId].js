@@ -1,17 +1,10 @@
 import React, { useEffect, useState, useMemo } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
-import E from '../../assets/eth.png'
 import { useWeb3 } from '@3rdweb/hooks'
 import { client } from '../../lib/sanityClient'
 import { ThirdwebSDK } from '@3rdweb/sdk'
-// import Header from '../../components/Header'
-import { CgWebsite } from 'react-icons/cg'
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
-// import { HiDotsVertical } from 'react-icons/hi'
 import NFTCard from '../../components/main/NFTCard'
 import LoggedNavbar from "../../components/main/loggedNavbar";
-import Image from 'next/image'
 
 const style = {
     bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
@@ -133,29 +126,6 @@ const Collection = () => {
             alt="profile image"
           />
         </div>
-        <div className={style.endRow}>
-          <div className={style.socialIconsContainer}>
-            <div className={style.socialIconsWrapper}>
-              <div className={style.socialIconsContent}>
-                <div className={style.socialIcon}>
-                  <CgWebsite />
-                </div>
-                <div className={style.divider} />
-                <div className={style.socialIcon}>
-                  <AiOutlineInstagram />
-                </div>
-                <div className={style.divider} />
-                <div className={style.socialIcon}>
-                  <AiOutlineTwitter />
-                </div>
-                <div className={style.divider} />
-                <div className={style.socialIcon}>
-                  {/* <HiDotsVertical /> */}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className={style.midRow}>
           <div className={style.title}>{collection?.title}</div>
         </div>
@@ -221,23 +191,3 @@ const Collection = () => {
 }
 
 export default Collection
-
-// export default function Collections() {
-//     const router = useRouter()
-//     const address = useWeb3()
-//     return  (
-//         <>
-//         {address ? (
-//             <>
-//                 <LoggedNavbar />
-//                 <Footer />
-//             </>
-//         ) : (
-//             <>
-//                 <Navbar />
-//                 <Footer /> 
-//             </>
-//         )}
-//         </>
-//     )
-// }
