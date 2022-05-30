@@ -13,7 +13,7 @@ export default function Hero(){
     if (!address) return
     ;(async () => {
         const userDoc = {
-          _type: 'users',
+          _type: 'users', 
           _id: address,
           userName: 'Unnamed',
           walletAddress: address,
