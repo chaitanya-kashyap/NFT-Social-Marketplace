@@ -4,8 +4,13 @@ import { useWeb3 } from '@3rdweb/hooks'
 import { client } from '../../lib/sanityClient'
 import { ThirdwebSDK } from '@3rdweb/sdk'
 import NFTCard from '../../components/main/NFTCard'
+import LoggedNavbar from '../../components/main/loggedNavbar'
+import Navbar from '../../components/landing/navbar'
+import Footer from '../../components/landing/footer'
 
 const Collection = () => {
+    const { address } = useWeb3()
+
     const router = useRouter()
     const { provider } = useWeb3()
     const { collectionId } = router.query
@@ -79,17 +84,40 @@ const Collection = () => {
     
   return (
     <>
-      <div className='border-2 border-purple-600 text-white'>
+    {address ? (
+      <>
+        <LoggedNavbar />
+        <div className='border-2 border-purple-600 text-white'>
         {collection.floorPrice}
-      </div>
-      {nfts.map((nftItem, id) => (
-        <NFTCard
-        key={id}
-        nftItem={nftItem}
-        title={collection.title}
-        listings={listings}
-         />
+          </div>
+        {nfts.map((nftItem, id) => (
+          <NFTCard
+          key={id}
+          nftItem={nftItem}
+          title={collection.title}
+          listings={listings}
+          />
       ))}
+      <Footer />
+      </>
+    ) : (
+      <>
+        <Navbar />
+        <div className='border-2 border-purple-600 text-white'>
+        {collection.floorPrice}
+          </div>
+        {nfts.map((nftItem, id) => (
+          <NFTCard
+          key={id}
+          nftItem={nftItem}
+          title={collection.title}
+          listings={listings}
+          />
+      ))}
+      <Footer />
+      </>
+    )}
+      
     </>
   )
   
