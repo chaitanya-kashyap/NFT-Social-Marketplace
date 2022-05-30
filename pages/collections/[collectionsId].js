@@ -101,91 +101,19 @@ const Collection = () => {
     }, [collectionId])
     
   return (
-    <div className="overflow-hidden">
-      <LoggedNavbar />
-      <div className={style.bannerImageContainer}>
-        <img
-          className={style.bannerImage}
-          src={
-            collection?.bannerImageUrl
-              ? collection.bannerImageUrl
-              : 'https://via.placeholder.com/200'
-          }
-          alt="banner"
-        />
+    <>
+      <div className='border-2 border-purple-600 text-white'>
+        {collection.floorPrice}
       </div>
-      <div className={style.infoContainer}>
-        <div className={style.midRow}>
-          <img
-            className={style.profileImg}
-            src={
-              collection?.imageUrl
-                ? collection.imageUrl
-                : 'https://via.placeholder.com/200'
-            }
-            alt="profile image"
-          />
-        </div>
-        <div className={style.midRow}>
-          <div className={style.title}>{collection?.title}</div>
-        </div>
-        <div className={style.midRow}>
-          <div className={style.createdBy}>
-            Created by{' '}
-            <span className="text-[#2081e2]">{collection?.creator}</span>
-          </div>
-        </div>
-        <div className={style.midRow}>
-          <div className={style.statsContainer}>
-            <div className={style.collectionStat}>
-              <div className={style.statValue}>{nfts.length}</div>
-              <div className={style.statName}>items</div>
-            </div>
-            <div className={style.collectionStat}>
-              <div className={style.statValue}>
-                {collection?.allOwners ? collection.allOwners.length : ''}
-              </div>
-              <div className={style.statName}>owners</div>
-            </div>
-            <div className={style.collectionStat}>
-              <div className={style.statValue}>
-                {/* <Image
-                  src={E}
-                  alt="eth"
-                  className={style.ethLogo}
-                /> */}
-                {collection?.floorPrice}
-              </div>
-              <div className={style.statName}>floor price</div>
-            </div>
-            <div className={style.collectionStat}>
-              <div className={style.statValue}>
-              {/* <Image
-                  src={E}
-                  alt="eth"
-                  className={style.ethLogo}
-                /> */}
-                {collection?.volumeTraded}.5K
-              </div>
-              <div className={style.statName}>volume traded</div>
-            </div>
-          </div>
-        </div>
-        <div className={style.midRow}>
-          <div className={style.description}>{collection?.description}</div>
-        </div>
-      </div>
-      <div className="flex flex-wrap ">
-        {nfts.map((nftItem, id) => (
-          <NFTCard
-            key={id}
-            nftItem={nftItem}
-            title={collection?.title}
-            listings={listings}
-          />
-        ))}
-      </div>
-    </div>
+      {nfts.map((nftItem, id) => (
+        <NFTCard
+        key={id}
+        nftItem={nftItem}
+        title={collection.title}
+        listings={listings}
+         />
+      ))}
+    </>
   )
   
 }
