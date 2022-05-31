@@ -52,7 +52,7 @@ const Collection = () => {
         'https://eth-rinkeby.alchemyapi.io/v2/kdtJFA-X2y_CpxjNXwcOYaqxrUYtODeW'
       )
       
-      return sdk.getNFTModule('0x4f66bc2887fAF31f1d6ec9026F3E54e89A2e7Fa6')
+      return sdk.getNFTModule('0x2DA9D2006ad48B1C8C7c60e263696f146D11eEbb')
     }, [provider])
   
     // get all NFTs in the collection
@@ -86,7 +86,7 @@ const Collection = () => {
     }, [marketPlaceModule])
   
     const fetchCollectionData = async (sanityClient = client) => {
-      const query = `*[_type == "marketItems" && contractAddress == "0x4f66bc2887fAF31f1d6ec9026F3E54e89A2e7Fa6" ] {
+      const query = `*[_type == "marketItems" && contractAddress == "0x2DA9D2006ad48B1C8C7c60e263696f146D11eEbb" ] {
         "imageUrl": profileImage.asset->url,
         "bannerImageUrl": bannerImage.asset->url,
         volumeTraded,
