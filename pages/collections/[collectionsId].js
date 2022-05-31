@@ -162,12 +162,12 @@ const Collection = () => {
           </div>
         </div>
         <div className={style.midRow}>
-          <div className={style.title}>{collection?.title}</div>
+          <div className={style.title}>{collection.title}</div>
         </div>
         <div className={style.midRow}>
           <div className={style.createdBy}>
             Created by{' '}
-            <span className="text-[#2081e2]">{collection?.creator}</span>
+            <span className="text-[#2081e2]">{collection.creator}</span>
           </div>
         </div>
         <div className={style.midRow}>
@@ -200,14 +200,14 @@ const Collection = () => {
                   alt="eth"
                   className={style.ethLogo}
                 />
-                {collection?.volumeTraded}.5K
+                {collection.volumeTraded}K
               </div>
               <div className={style.statName}>volume traded</div>
             </div>
           </div>
         </div>
         <div className={style.midRow}>
-          <div className={style.description}>{collection?.description}</div>
+          <div className={style.description}>{collection.description}</div>
         </div>
       </div>
       <div className="flex flex-wrap ">
