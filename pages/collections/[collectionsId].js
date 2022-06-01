@@ -8,9 +8,6 @@ import LoggedNavbar from '../../components/main/loggedNavbar'
 import Navbar from '../../components/landing/navbar'
 import Footer from '../../components/landing/footer'
 import Warn from '../../components/main/warn'
-import { CgWebsite } from 'react-icons/cg'
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
-import { HiDotsVertical } from 'react-icons/hi'
 
 const style = {
   bannerImageContainer: `h-[20vh] w-screen overflow-hidden flex justify-center items-center`,
@@ -138,29 +135,7 @@ const Collection = () => {
             alt="profile image"
           />
         </div>
-        <div className={style.endRow}>
-          <div className={style.socialIconsContainer}>
-            <div className={style.socialIconsWrapper}>
-              <div className={style.socialIconsContent}>
-                <div className={style.socialIcon}>
-                  <CgWebsite />
-                </div>
-                <div className={style.divider} />
-                <div className={style.socialIcon}>
-                  <AiOutlineInstagram />
-                </div>
-                <div className={style.divider} />
-                <div className={style.socialIcon}>
-                  <AiOutlineTwitter />
-                </div>
-                <div className={style.divider} />
-                <div className={style.socialIcon}>
-                  <HiDotsVertical />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
         <div className={style.midRow}>
           <div className={style.title}>{collection.title}</div>
         </div>
