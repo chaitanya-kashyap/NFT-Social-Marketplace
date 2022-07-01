@@ -15,7 +15,7 @@ export default function LoggedNavbar(){
                     </span>
                     <div className="flex space-x-8 text-white">
                         <span className="hover:text-purple-200"><Link href="/collections/[collectionId].js">Collection</Link></span>
-                        <span className="hover:text-purple-200"><Link href="https://rinkeby.etherscan.io/address/" onclick="location.href=this.href+{address};return false;">Stats</Link></span> 
+                        <span className="hover:text-purple-200"><Link href="https://rinkeby.etherscan.io/address/0x9150eae08bf53b29296e6309956451b20f087799" onclick="location.href=this.href+{address};return false;">Stats</Link></span> 
                         <span className="hover:text-purple-200"><Link href="https://discord.gg/rCGJEeNUWA">Community</Link></span>
                         <span className="hover:text-purple-200"><Link href="/blog">Blog</Link></span>
                     </div>
