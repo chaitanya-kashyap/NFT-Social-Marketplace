@@ -1,6 +1,7 @@
 import Link from "next/link";
-// import Image from 'next/image'
+import Image from "next/image";
 import { ChevronRightIcon } from "@heroicons/react/solid";
+import Info from '../../assets/info.svg'
 
 export default function View() {
   return (
@@ -19,6 +20,9 @@ export default function View() {
           </p>
           <ChevronRightIcon className="text-purple-600 h-6 w-6 mt-0.5 " />
         </div>
+      </div>
+      <div class="flex flex-col items-center justify-center rounded-lg">
+        <Image alt="hero" src={Info} />
       </div>
     </section>
   );
