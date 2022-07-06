@@ -4,20 +4,20 @@ import Navbar from "../components/landing/navbar";
 import LoggedNavbar from "../components/main/loggedNavbar";
 
 export default function Stats() {
-    const address = useWeb3()
-    return (
+  const address = useWeb3();
+  return (
+    <>
+      {address ? (
         <>
-        {address ? (
-            <>
-                <LoggedNavbar />
-                <Footer />
-            </>
-        ) : (
-            <>
-                <Navbar />
-                <Footer />  
-            </>
-        )}
+          <LoggedNavbar />
+          <Footer />
         </>
-    )
+      ) : (
+        <>
+          <Navbar />
+          <Footer />
+        </>
+      )}
+    </>
+  );
 }
